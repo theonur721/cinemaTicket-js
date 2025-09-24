@@ -19,5 +19,5 @@ Basit bir **JavaScript projesi**. Kullanıcı koltuk seçip film fiyatına göre
 
 ## Screen Gif
 
-![](/assets/ekran.gif)
+![](./assets/ekran.gif)
 ```
