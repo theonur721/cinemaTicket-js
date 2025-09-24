@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+:root {
+  /*Renkler*/
+  --background-color: #292929;
+  --seat-color: #444451;
+  --text-color: #777;
+  --reserved-color: #fff;
+  --selected-color: #f6eb6f;
+  --info-background: rgba(0, 0, 0, 0.2);
+
+  /*Animasyon*/
+  --transiiton: all 0.5s ease;
+
+  /*Gölge (box shadow*/
+  --box-shadow: 0 3px 8px rgba(255, 255, 255, 0.7);
+}
+
+body {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 10px;
+}
+
+/*Resim Alanı start*/
+.screen {
+  margin: 20px 0;
+  height: 100px;
+  width: 100%;
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+}
+
+.screen img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+/*Resim alanı end*/
+
+/*Koltuk Alanı start*/
+.seatRow {
+  display: flex;
+}
+
+.seat {
+  color: var(--seat-color);
+  margin: 5px;
+  transition: var(--transiiton);
+}
+
+.seat.reserved {
+  color: var(--reserved-color);
+}
+.seat.selected {
+  color: var(--selected-color);
+}
+
+.seat:not(.reserved):hover {
+  cursor: pointer;
+  transform: scale(1.4);
+}
+/*Koltuk Alanı end*/
+
+/*Koltuk Renk Seçim Alanı start*/
+.info {
+  background-color: var(--info-background);
+  display: flex;
+  padding: 5px 10px;
+  color: var(--text-color);
+  gap: 20px;
+  border-radius: 5px;
+}
+
+.info li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*Koltuk Renk Seçim Alanı end*/
+
+/*Hesap Alanı start*/
+.infoText {
+  color: var(--reserved-color);
+}
+
+.infoText span {
+  color: var(--selected-color);
+}
+
+.infoText.open {
+  display: block;
+}
+/*Hesap Alanı end*/
